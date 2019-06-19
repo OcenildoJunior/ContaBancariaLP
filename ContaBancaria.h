@@ -4,16 +4,17 @@
 #include <iostream>
 
 struct ContaBancaria{
-	std::string nome;
+	std::vector<std::string> nome;
 	std::vector<std::string> conta;
-	float saldo; 
-    int qtde_contas = 0;
+	std::vector<std::string> saldo; 
 };
 
-void criarConta(ContaBancaria& conta);
-void listarContas(ContaBancaria& conta);
-void detalheConta(ContaBancaria& conta);
-/*void saque(ContaBancaria& conta, int valor);
-void deposito(ContaBancaria& conta, int valor);
-void transferencia(ContaBancaria& origem, ContaBancaria& destino, int valor);
-void imprimeSaldo(ContaBancaria& conta); */
+int menu();
+void criarConta(ContaBancaria& contaB);
+void listarContas(ContaBancaria& contaB);
+void detalheConta(ContaBancaria& contaB);
+void alterarConta(ContaBancaria& contaB);
+//void excluirConta(ContaBancaria& contaB);
+void transferencia(ContaBancaria& contaB);
+void deposito(ContaBancaria& contaB);
+void saque(ContaBancaria& contaB);
